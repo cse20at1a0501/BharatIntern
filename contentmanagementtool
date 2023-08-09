@@ -1,0 +1,90 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Content Management Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #a141a1;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 900px;
+            max-height: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #882d6b;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #5d872f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Content Management Tool</h1>
+    </header>
+
+    <div class="container">
+        <label for="postTitle">Post Title</label>
+        <input type="text" id="postTitle" placeholder="Enter post title">
+
+        <label for="postContent">Post Content</label>
+        <textarea id="postContent" rows="6" placeholder="Enter post content"></textarea>
+
+        <label for="postImage">Upload Image</label>
+        <input type="file" id="postImage"><br><br>
+
+        <button id="addPost">Add Post</button>
+    </div>
+
+    <script>
+        document.getElementById('addPost').addEventListener('click', function () {
+            const postTitle = document.getElementById('postTitle').value;
+            const postContent = document.getElementById('postContent').value;
+            const postImage = document.getElementById('postImage').value;
+            const postVideo = document.getElementById('postVideo').value;
+
+            // Here you can perform actions to add the post to your blog.
+            // For this example, we'll just log the inputs.
+            console.log("Post Title:", postTitle);
+            console.log("Post Content:", postContent);
+            console.log("Image:", postImage);
+            console.log("Video:", postVideo);
+
+            // You can clear the input fields after adding the post.
+            document.getElementById('postTitle').value = '';
+            document.getElementById('postContent').value = '';
+            document.getElementById('postImage').value = '';
+            document.getElementById('postVideo').value = '';
+        });
+    </script>
+</body>
+</html>
